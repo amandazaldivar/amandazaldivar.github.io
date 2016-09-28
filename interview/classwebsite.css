@@ -1,0 +1,120 @@
+
+body {
+	font-style: ;
+	font-size:20px;
+	font-color: black;
+	background-color: white;
+
+}
+a {
+	font-style: Helvetica;
+	font-size:20px;
+	color: white;
+	display:block;
+	margin-left:20px;
+	margin-top:35px;
+	text-decoration:none;
+	width:170px;
+	float:left;
+
+}
+
+p a{
+	float:none;
+	text-decoration:none;
+	font-style: Helvetica;
+	color:gray;
+	margin-left:0px;
+	display:inline;
+
+}
+
+
+h3 p a{
+	float:none;
+	text-decoration:none;
+	font-style: Helvetica;
+	font-size:20px;
+	color:gray;
+	margin-left:0px;
+	display:inline;
+
+
+	}
+div a{
+	
+	margin-left: 360px;
+	margin: 20px,20px,20px,360px;
+	display: inline-block;
+}
+
+div img{
+	
+	margin-left: 360px;
+	margin: 20px,20px,20px,360px;
+	width:400px; 
+	display: inline-block;
+}
+em a{
+	size:200px;
+}
+
+
+.navbar {
+	font-style: Helvetica;
+	font-size:15px;
+	color: yellow; 
+	display:block;
+	text-decoration:none;
+	width:300px;
+	height: 3000px;
+	float:left;
+	position:fixed;
+	background-color:#00B9FF;
+}
+
+h6 {
+	margin-left:320px;
+
+}
+
+p {
+	font-family: Helvetica ;
+	margin-left: 360px;
+	margin-bottom: 40px;
+	margin-right:100px;
+	color: #00B9FF;
+}
+
+.links{
+	font-family: Helvetica ;
+	margin-left: 10px;
+	margin-bottom: 40px;
+	color: #00B9FF;
+}
+h3 {
+	font-style:bold;
+	font-family: Helvetica ;
+	margin-left: 360px;
+	color: black;
+	margin-right:100px;
+
+}
+
+.name {
+	margin-left:360px;
+	size:1000px;
+	color:#00B9FF;
+	font-size: 40px;
+	font-family: Helvetica ;
+	
+}
+
+.home{ 
+margin-top:500px;
+margin-left:360px; 
+
+
+.logo{
+	left-margin:300px;
+}
