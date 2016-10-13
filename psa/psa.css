@@ -1,0 +1,60 @@
+body { 
+	width: auto;
+ 	height: 8054px;
+ 	background-color: white;
+}
+
+#wrapper {
+	background-size:50% auto;
+	width: 100%;
+
+}
+  #circle {
+      width: 50px;
+      height: 50px;
+      -webkit-border-radius: 25px;
+      -moz-border-radius: 25px;
+      border-radius: 25px;
+      background: white;
+      margin:0 auto;
+      position:absolute;
+}
+
+#center {
+    position:fixed; 
+ 	width: 75%;
+	left: 50%;
+	margin-left: -37.5%;
+	padding-top: 20%;
+	
+}
+h1 {
+	size:200px;
+}
+
+#selfie {
+	padding-top: 400px;
+	padding-left:200px;
+	padding-right:200px;
+}
+
+#squirrel {
+	padding-top: 200px;
+	padding-left:200px;
+	padding-right:200px;}
+
+
+#movie {
+	padding-top: 400px;
+	padding-left:400px;
+	padding-right:400px;
+
+}
+
+
+#wow {
+	padding-top: 400px;
+	padding-left:200px;
+	padding-right:800px;
+
+}
