@@ -1,7 +1,9 @@
 body { 
 	width: auto;
  	height: 8054px;
- 	background-color: white;
+ 	background-color: lightgray;
+ 	color: white;
+ 	font-family:'Lora', serif;;
 }
 
 #wrapper {
@@ -25,27 +27,31 @@ body {
  	width: 75%;
 	left: 50%;
 	margin-left: -37.5%;
-	padding-top: 20%;
+	padding-top: 18%;
+	size:100px;
 	
 }
+
 h1 {
-	size:200px;
+	size:300px;
+	font-family: 'Rubik Mono One', sans-serif;
+	font-size:50px;
 }
 
 #selfie {
-	padding-top: 400px;
+	padding-top: 600px;
 	padding-left:200px;
 	padding-right:200px;
 }
 
 #squirrel {
-	padding-top: 200px;
+	padding-top: 300px;
 	padding-left:200px;
 	padding-right:200px;}
 
 
 #movie {
-	padding-top: 400px;
+	padding-top: 200px;
 	padding-left:400px;
 	padding-right:400px;
 
@@ -58,3 +64,61 @@ h1 {
 	padding-right:800px;
 
 }
+
+#east {
+		padding-left:500px;
+		padding-right:500px;
+		padding-top:200px;
+}
+
+#taxi {
+		padding-left:600px;
+		padding-right:300px;
+		padding-top:200px;
+}
+#pic{
+		padding-left:250px;
+		padding-right:250px;
+		padding-top:200px;
+	}
+
+#oh {
+		padding-left:500px;
+		padding-right:500px;
+		padding-top:200px;
+}
+
+#east {
+		padding-left:500px;
+		padding-right:500px;
+		padding-top:200px;		
+}
+
+#follow{
+		padding-left:500px;
+		padding-right:500px;
+		padding-top:200px;
+}
+
+#dog {
+		padding-left:200px;
+		padding-right:200px;
+		padding-top:200px;
+}
+body {
+
+horizontal orientation
+vertical orientation
+diagonal orientation
+diagonal orientation
+radial orientation
+CSSSASS
+ knob 
+background: rgba(43,43,43,1);
+background: -moz-linear-gradient(left, rgba(43,43,43,1) 0%, rgba(43,43,43,1) 24%, rgba(0,0,0,1) 47%, rgba(18,18,18,1) 58%, rgba(71,71,71,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(43,43,43,1)), color-stop(24%, rgba(43,43,43,1)), color-stop(47%, rgba(0,0,0,1)), color-stop(58%, rgba(18,18,18,1)), color-stop(100%, rgba(71,71,71,1)));
+background: -webkit-linear-gradient(left, rgba(43,43,43,1) 0%, rgba(43,43,43,1) 24%, rgba(0,0,0,1) 47%, rgba(18,18,18,1) 58%, rgba(71,71,71,1) 100%);
+background: -o-linear-gradient(left, rgba(43,43,43,1) 0%, rgba(43,43,43,1) 24%, rgba(0,0,0,1) 47%, rgba(18,18,18,1) 58%, rgba(71,71,71,1) 100%);
+background: -ms-linear-gradient(left, rgba(43,43,43,1) 0%, rgba(43,43,43,1) 24%, rgba(0,0,0,1) 47%, rgba(18,18,18,1) 58%, rgba(71,71,71,1) 100%);
+background: linear-gradient(to right, rgba(43,43,43,1) 0%, rgba(43,43,43,1) 24%, rgba(0,0,0,1) 47%, rgba(18,18,18,1) 58%, rgba(71,71,71,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2b2b2b', endColorstr='#474747', GradientType=1 );}
