@@ -1,26 +1,41 @@
 body { 
 	width: auto;
- 	height: 8054px;
- 	background-color: lightgray;
+ 	height: 5254px;
  	color: white;
- 	font-family:'Lora', serif;;
+ 	font-family:'Lora', serif;
 }
+
+#line1{
+    content:"1";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+  	margin-left:120px;
+    border-left: 20px dotted #444;
+    height: 5254px;
+    color:white;
+}
+
+#line2 {
+    content:"2";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    margin-left:1250px;
+    margin-right:120px;
+    border-left: 20px dotted #444;
+    height: 5254px;
+}
+
 
 #wrapper {
 	background-size:50% auto;
 	width: 100%;
 
 }
-  #circle {
-      width: 50px;
-      height: 50px;
-      -webkit-border-radius: 25px;
-      -moz-border-radius: 25px;
-      border-radius: 25px;
-      background: white;
-      margin:0 auto;
-      position:absolute;
-}
+
 
 #center {
     position:fixed; 
@@ -45,13 +60,13 @@ h1 {
 }
 
 #squirrel {
-	padding-top: 300px;
+	padding-top:250px;	
 	padding-left:200px;
 	padding-right:200px;}
 
 
 #movie {
-	padding-top: 200px;
+	padding-top:250px;	
 	padding-left:400px;
 	padding-right:400px;
 
@@ -59,7 +74,7 @@ h1 {
 
 
 #wow {
-	padding-top: 400px;
+	padding-top:250px;	
 	padding-left:200px;
 	padding-right:800px;
 
@@ -68,43 +83,60 @@ h1 {
 #east {
 		padding-left:500px;
 		padding-right:500px;
-		padding-top:200px;
+		padding-top:250px;	
 }
 
 #taxi {
 		padding-left:600px;
 		padding-right:300px;
-		padding-top:200px;
+		padding-top:250px;	
 }
 #pic{
 		padding-left:250px;
 		padding-right:250px;
-		padding-top:200px;
+		padding-top:250px;	
 	}
 
+#saturday {
+		padding-left:250px;
+		padding-right:250px;
+		padding-top:250px;	
+}
 #oh {
 		padding-left:500px;
 		padding-right:500px;
-		padding-top:200px;
+		padding-top:250px;	
 }
 
 #east {
 		padding-left:500px;
 		padding-right:500px;
-		padding-top:200px;		
+		padding-top:250px;		
 }
 
 #follow{
 		padding-left:500px;
 		padding-right:500px;
-		padding-top:200px;
+		padding-top:250px;	
 }
 
 #dog {
 		padding-left:200px;
 		padding-right:200px;
-		padding-top:200px;
+		padding-top:250px;	
 }
+
+#tina{ 
+		padding-left:300px;
+		padding-right:700px;
+		padding-top:250px;	
+}
+
+#uptown {
+		padding-left:200px;
+		padding-right:200px;
+		padding-top:250px;
+		}	
 body {
 
 horizontal orientation
@@ -122,3 +154,8 @@ background: -o-linear-gradient(left, rgba(43,43,43,1) 0%, rgba(43,43,43,1) 24%, 
 background: -ms-linear-gradient(left, rgba(43,43,43,1) 0%, rgba(43,43,43,1) 24%, rgba(0,0,0,1) 47%, rgba(18,18,18,1) 58%, rgba(71,71,71,1) 100%);
 background: linear-gradient(to right, rgba(43,43,43,1) 0%, rgba(43,43,43,1) 24%, rgba(0,0,0,1) 47%, rgba(18,18,18,1) 58%, rgba(71,71,71,1) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2b2b2b', endColorstr='#474747', GradientType=1 );}
+
+
+
+
+
