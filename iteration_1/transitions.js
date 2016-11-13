@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
 	//append new element
-	for (i = 0; i < 684; i++){
+	for (i = 0; i < 184; i++){
 		$("body").append('<div class="element" ></div>');
 		console.log("element " + i + " added");
 }
