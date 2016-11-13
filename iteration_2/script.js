@@ -82,7 +82,7 @@ $(document).ready(function(){
 	})
 
 	$('.random').click(function(){
-	$(this).css('background-color','black');
+	$(this).css('background-color','#00e1ff');
 	})
 
 if (i < 50) {
