@@ -18,7 +18,7 @@ $(document).ready(function(){
 	})
 
 if (i < 50) {
-color = "yellow";
+color = "white";
 
 }
 })
