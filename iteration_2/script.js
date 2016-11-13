@@ -27,12 +27,6 @@ $(document).ready(function(){
   drawRandomObject();
   drawRandomObject();
   drawRandomObject();
-  drawRandomObject();
-  drawRandomObject();
-  drawRandomObject();
-  drawRandomObject();
-  drawRandomObject();
-  drawRandomObject();
   drawRandomObject(); 
 
 
