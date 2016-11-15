@@ -6,11 +6,11 @@ $(document).ready(function(){
   var second = now.getSeconds();
   console.log(second);
 
-  drawGridObjects();
+ drawGridObjects();
 
  setInterval(function(){ 
-    rotateGridObjects(second);
-  }, 1000); //this will call the function in every 1000 miliseconds.
+    scaleSquare(second);
+  }, 1000); 
 
 
  function drawGridObjects(){
@@ -24,11 +24,14 @@ $(document).ready(function(){
 }
 
 
-  function rotateGridObjects(){
+  function scaleSquare(){
     var now = new Date();
     var second = now.getSeconds();
     console.log(second);
-    $('.time').css('transform','rotate(' + second*6 + 'deg)');
+    //$('.time').css('transform','rotate(' + second*6 + 'deg)');
+    $('.time').css('transform','scale('x*s, y*s')');
+
+    //is this the right way??
   }
 
 	//mouse interaction
@@ -40,11 +43,7 @@ $(document).ready(function(){
 		$(this).css('background-color','#00e1ff');
 	})
 
-    $('.time').mouseover(function(){
-    $(this).css('background-color','#2c3fba');
-  })
-
-	$('.time').click(function(){
+	$('.random').click(function(){
 	$(this).css('background-color','#00e1ff');
 	})
 
