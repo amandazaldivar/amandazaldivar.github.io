@@ -1,0 +1,26 @@
+body{
+	margin:0 auto;
+	padding:100px;
+	background-image: url("https://s-media-cache-ak0.pinimg.com/originals/37/ee/1b/37ee1b0b8a80a8a7028e1586cee9ff5c.jpg")
+}
+
+
+h1{
+	font-family: 'Martel', serif;
+	font-size:80px;
+	line-height: 130%;
+	color:#013993;
+}
+
+li {
+	font-family: 'Oxygen', sans-serif;
+
+}
+
+h3 {
+	font-family: 'Oxygen', sans-serif;
+	font-size:20px;
+
+}
+font-family: 'Martel', serif;
+font-family: 'Oxygen', sans-serif;

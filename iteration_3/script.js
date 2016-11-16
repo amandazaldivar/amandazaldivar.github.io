@@ -18,7 +18,7 @@ $(document).ready(function(){
   for (j = 0; j < 18; j++) {
     for (i = 0; i < 20; i++) { 
       $("body").append( "<div class='element' style='left:" + i*5 + "vw; top:" + j*50 + "px;'></div>" );
-      //console.log("element " + j + ", " + i + " added");
+      console.log("element " + j + ", " + i + " added");
     }
   }
 }
@@ -30,7 +30,7 @@ $(document).ready(function(){
     console.log(second);
     if (second < 60) {
       $('.time').css({
-       // transform: 'rotate(' + second * 6 + 'deg)',
+
         width: second * 10 + 'px',
         height: second * 10 + 'px',
         marginLeft: second * -5 + 'px',
@@ -39,7 +39,6 @@ $(document).ready(function(){
     }
     else {
      $('.time').css({
-      // transform: 'rotate(' + second * 6 + 'deg)',
        width: '0px',
        height: '0px',
 
