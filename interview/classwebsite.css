@@ -4,6 +4,7 @@ body {
 	font-size:20px;
 	font-color: black;
 	background-color: white;
+	margin:0px;
 
 }
 a {
@@ -53,7 +54,7 @@ div img{
 	margin-left: 360px;
 	margin: 20px,20px,20px,360px;
 	width:400px; 
-	display: inline-block;
+	display: inline;
 }
 em a{
 	size:200px;
@@ -71,8 +72,13 @@ em a{
 	float:left;
 	position:fixed;
 	background-color:#00B9FF;
+	margin:0px;
+	margin-top:0px;
 }
 
+div {
+	position:inline;
+}
 h6 {
 	margin-left:320px;
 
