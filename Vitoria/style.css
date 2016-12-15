@@ -1,0 +1,89 @@
+body{
+	margin:0 auto;
+	display: fixed;
+}
+
+img{
+
+	z-index: -1;
+	min-height: 100%;
+	min-width: 1024px;
+	width: 100%;
+	height: auto;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+p{
+	padding:30px;
+	font-size:15pt;
+	color:#292f3a;
+	text-align:center;
+	font-family: 'Cantata One', serif;
+	background-color:rgba(255,255,255,0.8);}
+
+div {
+  opacity: 0;
+}
+
+div:hover {
+  opacity: 1;
+  transition: 1s;
+}
+
+
+
+
+.d{
+	width:130px;
+	height:130px;
+    left: 32%;
+    top: 13%;
+    position:fixed;
+
+}
+
+
+.a{
+	width:100px;
+	height:120px;
+    left: 63%;
+    top: 13%;
+    position:fixed;
+
+
+}
+
+
+.e{
+	width:100px;
+	height:125px;
+    left: 49%;
+    top: 43%;
+    position:fixed;
+
+}
+
+.f{
+	width:119px;
+	height:142px;
+    left: 35.5%;
+    top: 70%;
+    position:fixed;
+
+
+}
+
+
+.e2{
+	width:80px;
+	height:122px;
+    left: 58%;
+    top: 74%;
+    position:fixed;
+
+
+}
+
+
