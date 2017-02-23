@@ -1,0 +1,42 @@
+
+  h1{
+  	font-size: 6vw;
+  	color:gray;
+  	position: fixed;
+  	display:inline-block;
+  	overflow:auto;
+  	overflow-wrap: break-word;
+  	line-break:auto;
+  	display:relative;
+
+
+  }  
+
+
+.container{
+	top: 10%;
+	bottom: 10%;
+	left: 34.2%;
+	right: 35.2%;
+	position:fixed;
+
+}
+
+.homepagecourtyard{
+	position:fixed;
+	top: 10%;
+	bottom: 10%;
+	left: 34.2%;
+	right: 35.2%;
+	color:#333;
+	font-size: 1.25rem;
+	font-weight:300;
+	padding:1rem 1.5rem;
+	transition: all 3s;
+	background-size: 100%;
+    background-image: linear-gradient(#FF2348, #FBD600);
+     mix-blend-mode:overlay;
+
+
+}
+
