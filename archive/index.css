@@ -93,24 +93,28 @@ padding-top: 80px;
 	text-decoration: none;
 }
 
+.name a:hover{
+	color: #4ec4dd;
+	text-decoration: none;
+}
+
 .studio{
 	color:#7c8e9d;
 }
 
 
 
-a:link {
-    color: #9bc5de;	
-
+a:visited{
+    color: #4d4e4f;
 }
 
-a:visited {
-    color: #4d4e4f;
+a:link {
+    color: #9bc5de;
 }
 
 
 a:hover {
-    color: #7c8e9d;
+    color: #4ec4dd;
 }
 
 a:active {
