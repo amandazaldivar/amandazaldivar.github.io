@@ -1,0 +1,53 @@
+body{
+	margin:0;
+	padding:0;
+}
+
+
+.wrapper{
+	margin: 0 auto;
+	width:960px;
+}
+
+.composition{
+	width:768px;
+	height:768px;
+	background:#f8e71c;
+	display:inline-block;	
+
+}
+
+
+.blueblock{
+	width:568px;
+	height:568px;
+	background-color: #202665;
+	margin: 100px;
+
+	
+}
+
+.greenblock{
+	width:368px;
+	height:368px;
+	background-color: #009E4F;
+	margin:100px;
+	display:inline-block;
+
+}
+
+.redblock{
+	height: 100px;
+	width:768px;
+	background-color: #D0021B;
+	margin:-100px 0 0 0;
+
+}
+
+.redrec{
+	width:328px;
+	height:67px;
+	margin:20px;
+	background-color: #ED2025;
+
+}

@@ -1,0 +1,174 @@
+*{
+	box-sizing: border-box;
+}
+
+
+body{
+	margin:0;
+	padding:0;
+	font-size:0;	
+}
+
+div{
+	vertical-align: top;
+}
+
+
+.wrapper{
+	margin: 0 auto;
+	width:960px;
+}
+
+.composition{
+	width:768px;
+	height:600px;
+	background:#41443d;
+
+
+}
+
+
+.centercircle{
+	background-color: #d8d8d8;
+	width:100px;
+	height: 100px;
+	border-radius:50%;
+	margin-left:334px;
+	margin-top:250px;
+	position: absolute;
+}
+
+
+
+
+
+.topleft{
+	background-color:#b0ab97;
+	height:400px;
+	width:256px;
+	display:inline-block;
+}
+
+.tlblack{
+	height:300px;
+	width:156px;
+	margin:50px;
+	background-color: black;
+	display:inline-block;	
+}
+
+.tlgray{
+	height:280px;
+	width:73px;
+	margin:50px;
+	background-color: #cfd0ca;
+	display:inline-block;	
+	margin:10px 5px 10px 0;
+}
+
+.tlgray2{
+	height:280px;
+	width:73px;
+	margin:50px;
+	background-color: #cfd0ca;
+	display:inline-block;	
+	margin:10px 0 10px 5px;
+}
+
+
+
+
+
+
+
+.topright{
+	background-color: #495056;
+	height:200px;
+	width:512px;
+	display: inline-block;
+	padding:50px;
+
+}
+
+.trblack{
+	background-color: black;
+	height:88px;
+	width:412px;
+	display:inline-block;	
+}
+.trwhitebar{
+	background-color: #cfceca;
+	width:396px;
+	height:8px;
+	display:inline-block;
+	margin:8px 8px 0 8px;
+
+}
+
+
+
+
+
+.bottomleft{
+	background-color: #b6b7b1;
+	display: inline-block;
+	height:200px;
+	width:512px;			
+}
+
+
+.blrec{
+	height:100px;
+	width:412px;	
+	background-color: #202c2a;
+	margin:50px;
+}
+
+.blrec2{
+	height:80px;
+	width:57px;
+	background-color:#495056;
+	margin:10px 0 10px 10px;
+	display: inline-block;
+}
+
+
+
+
+
+.bottomright{
+	background-color: #202c28;
+	display: inline-block;
+	height:400px;
+	width:256px;
+	vertical-align: bottom;
+	position: relative;
+	top:-200px;
+
+}
+
+.brblack{
+	height:300px;
+	width:156px;
+	margin:50px;
+	background-color: #cfceca;
+	display:inline-block;	
+}
+
+.brgray{
+	height:280px;
+	width:73px;
+	margin:50px;
+	background-color: #202c28;
+	display:inline-block;	
+	margin:10px 5px 10px 0;
+}
+
+.brgray2{
+	height:280px;
+	width:73px;
+	margin:50px;
+	background-color: #202c28;
+	display:inline-block;	
+	margin:10px 0 10px 5px;
+}
