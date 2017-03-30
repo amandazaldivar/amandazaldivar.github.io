@@ -1,0 +1,237 @@
+body{
+	margin:0 auto;
+	padding:0;
+	font-family:helvetica, arial, sans-serif;
+	z-index:1;
+	margin-top:20%;
+	margin-left:10%;
+
+}
+
+div{
+	display: inline-block;
+}
+.container{
+margin:0 auto;
+width:100%;
+font-size:0;
+display:inline-flex;
+
+}
+
+.wrapper1{
+width: 120px;
+height: 155px;
+display: inline-block;
+background-color: white;
+position:relative;
+
+}
+
+
+.wrapper4{
+width: 35px;
+height: 155px;
+display: inline-block;
+background-color: white;
+position:relative;
+
+}
+
+.circle{
+height:55%;
+width:70%;
+border-radius:100%;
+background-color: gray;
+display:inline-block;
+bottom:0;
+position: absolute;
+}
+
+.circle2{
+height:80%;
+width:80%;
+border-radius:100%;
+background-color: white;
+position: absolute;
+right:11%;
+top:10%;
+}
+
+
+.halfstem{
+	height:55%;
+	width:8%;
+	background-color: gray;
+	position: absolute;
+	bottom:0;
+}
+
+.stem{
+	height:100%;
+	width:8%;
+	background-color: gray;
+	position: absolute;
+	bottom:0;
+}
+
+.halfstema{
+	right:29%;
+}
+.serifbottom{
+	width:30%;
+	height:6%;
+	background-color: gray;
+	position: absolute;
+	bottom:0;
+
+}
+
+
+.seriftop {
+	width:30%;
+	height:6%;
+	background-color: gray;
+	position: absolute;
+
+}
+
+.circlea{
+	left:0;
+}
+
+.seriftopa{
+	right:0;
+	bottom:49%;
+
+}
+
+.serifbottoma{
+	bottom:0;
+	right:0;
+
+}
+
+
+.serifbottomb{
+	bottom:0;
+
+}
+
+.circleb{
+	right:0;
+}
+
+.stemb{
+	right:63%;
+}
+
+
+.stemd{
+	right:29%;
+}
+
+.seriftopd{
+	right:0;
+}
+
+.serifbottomd{
+	right:0;
+
+}
+
+.circled{
+	left:0;
+}
+
+
+.circlee{
+	
+}
+
+.dot{
+	width:23%;
+	height:10%;
+	background-color: gray;
+	margin-top: 80%;
+	position: absolute;
+}
+
+.halfstemi{
+	width:23%;
+}
+
+.serifbottomi{
+	width:100%;
+}
+
+.serifbottoml, .seriftopl{
+	width:100%;
+}
+
+.steml{
+	width:23%;
+}
+
+.circlef{
+	top:0;
+	right:0;
+}
+
+.stemf{
+	height:74%;
+	right:63%;
+}
+
+.block{
+	width:63.75%;
+	height:72%;
+	right:0;
+	top:28.5%;
+	position: absolute;
+	background-color:white;
+}
+
+.seriftopf{
+	top:27%;
+	left:-10%;
+	height:9%;
+}
+
+.seriftopt{
+	top:40%;
+	width:100%;
+}
+
+
+.stemt{
+	left:40%;
+		width:23%;
+}
+
+.circleh{
+	bottom:0;
+}
+
+.blockh{
+	bottom:0;
+	left:7%;
+	background-color: white;
+	width:63.75%;
+	height:31%;
+	position: absolute;
+}
+
+.hside{
+	width:11%;
+	background-color: gray;
+	height:100%;
+	right:.5%;
+	position: absolute;
+
+
+}
+
+.serifbottomh{
+	right:0;
+}
