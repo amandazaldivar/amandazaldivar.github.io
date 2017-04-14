@@ -1,20 +1,116 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
     <title></title>
-    <link href="assets/css/jquery.fullPage.css" media="all" rel="stylesheet" />
-    <link rel="shortcut icon" href="" />
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
+		<link rel="stylesheet" type="text/css" href="assets/css/jquery.fullPage.css" />
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+		<script src="assets/js/jquery.easings.min.js"></script>
+
+		<script type="text/javascript" src="assets/js/scrolloverflow.min.js"></script>
+
+		<script type="text/javascript" src="assets/js/jquery.fullPage.js"></script>
+
+		<style type="text/css">
+
+		</style>
 
   </head>
 
+
+
   <body>
+
+	<div id="fullpage">
+	  <div class="section">
+        <div class="page-wrapper"> 
+              <div id="section1"> <span id="text_target"></span> </div>
+              <div class="caret"></div>
+        </div>
+    </div>
+
+	  <div class="section">
+        <div class="page-wrapper"> 
+              <div id="section2"> <span id="text_target"></span> </div>
+        </div>
+      
+    </div>
+
+	  <div class="section">
+      <div class="page-wrapper"> 
+              <div id="section3"> <span id="text_target"></span> </div>
+        </div> 
+    </div>
+
+	  <div class="section">
+           <div class="page-wrapper"> 
+              <div id="section4"> <span id="text_target"></span> </div>
+        </div>  
+    </div>
+
+	  <div class="section">
+           <div class="page-wrapper"> 
+              <div id="section5"> <span id="text_target"></span> </div>
+        </div>  
+    </div>
+ 
+
+
+	  <div class="section">
+           <div class="page-wrapper"> 
+              <div id="section6"> <span id="text_target"></span> </div>
+              <div class="typehere lettercontainer"> 
+                <div class="flicker"> </div>
+                    <div class="typehere-flicker"> <span id="text_target"></span> </div>
+
+              </div>
+        </div>  
+    </div>
+ 
+
+    <div class="section">
+           <div class="page-wrapper"> 
+              <div id="section7"> <span id="text_target"></span> </div>
+              <div class="typehere2 lettercontainer"> 
+                <div class="flicker2"> </div>
+                    <div class="typehere-flicker2"> <span id="text_target"></span> </div>
+
+              </div>
+        </div>  
+    </div>
+ 
+
+
+    <div class="section">
+           <div class="page-wrapper"> 
+              <div id="section8"> <span id="text_target"></span> </div>
+              <div class="typehere3 lettercontainer"> 
+                <div class="flicker3"> </div>
+                    <div class="typehere-flicker3"> <span id="text_target"></span> </div>
+
+              </div>
+        </div>  
+    </div>
+ 
+    <div class="section">
+      <div class="page-wrapper"> 
+              <div id="section9"> <span id="text_target"></span> </div>
+        </div> 
+    </div>
+
+
+
+
+
+
 <div class="lettercontainer">
 <div class="container">
   <div class="letters">
 
-     <div class="a">
+	   <div class="a letter-a">
           <div class="wrapper1 a">
             <div class="circle circlea">
               <div class="circle2">
@@ -36,7 +132,7 @@
 
 
 
-      <div class="b">
+      <div class="b letter-b">
           <div class="wrapper1 b">
 
             <div class="stem stemb">
@@ -58,7 +154,7 @@
 
 
 
-      <div class="c">
+      <div class="c letter-c">
             <div class="wrapper2 c">
             <div class="circle circlec">
                 <div class="circle2">
@@ -71,7 +167,7 @@
 
 
 
-      <div class="d">
+      <div class="d letter-d">
             <div class="wrapper1 d">
 
               <div class="circle circled">
@@ -92,7 +188,7 @@
 
 
 
-      <div class="e">
+      <div class="e letter-e">
             <div class="wrapper2 e">
             <div class="circle circlec">
                 <div class="circle2">
@@ -106,7 +202,7 @@
 
 
 
-      <div class="f">
+      <div class="f letter-f">
           <div class="wrapper1 f">
 
               <div class="stem stemf">
@@ -129,8 +225,8 @@
 
 
 
-      <div class="g">
-            <div class="wrapper1below g">
+      <div class="g letter-g">
+            <div class="wrapper1below">
 
             <div class="wrapperbelow">
                 <div class="circle circleg">
@@ -154,7 +250,7 @@
 
 
 
-      <div class="h">
+      <div class="h letter-h">
 
           <div class="wrapper1 h">
 
@@ -178,7 +274,7 @@
 
 
 
-      <div class="i">
+      <div class="i letter-i">
           <div class="wrapper4 i">
 
               <div class="dot">
@@ -197,7 +293,7 @@
 
 
 
-      <div class="j">
+      <div class="j letter-j">
 
             <div class="wrapper1below">
 
@@ -222,7 +318,7 @@
 
 
 
-      <div class="k">
+      <div class="k letter-k">
         <div class="wrapper1 k">
            <div class="wrapper1">
 
@@ -243,7 +339,7 @@
 
 
 
-      <div class="l">
+      <div class="l letter-l">
            <div class="wrapper4 l">
 
             <div class="seriftop seriftopl">
@@ -259,10 +355,10 @@
 
 
 
-      <div class="m">
+      <div class="m letter-m">
         <div class="wrapper5 m">
 
-            <div class="wrapper6 h">
+            <div class="wrapper6">
 
                 <div class="halfstem mleft">
                 </div>
@@ -302,9 +398,9 @@
 
 
 
-      <div class="n">
+      <div class="n letter-n">
 
-          <div class="wrapper1 h">
+          <div class="wrapper1">
 
               <div class="halfstem">
               </div>
@@ -326,7 +422,7 @@
 
 
 
-      <div class="o">
+      <div class="o letter-o">
           <div class="wrapper2 o">
           <div class="circle circlec">
               <div class="circle2">
@@ -337,7 +433,7 @@
 
 
 
-      <div class="p">
+      <div class="p letter-p">
 
        <div class="wrapper1below">
 
@@ -357,7 +453,7 @@
 
 
 
-      <div class="q">
+      <div class="q letter-q">
 
        <div class="wrapper1below">
 
@@ -376,7 +472,7 @@
 
 
 
-      <div class="r">
+      <div class="r letter-r">
            <div class="wrapper1">
 
             <div class="halfstem halfstema halfstemr">
@@ -399,13 +495,13 @@
 
 
 
-      <div class="s">
+      <div class="s letter-s">
       </div>
 
 
 
 
-      <div class="t">
+      <div class="t letter-t">
 
          <div class="wrapper4">
 
@@ -426,7 +522,7 @@
 
 
 
-      <div class="u">
+      <div class="u letter-u">
 
                <div class="wrapper1">
                 <div class="circle circlea">
@@ -450,7 +546,7 @@
 
 
 
-      <div class="v">
+      <div class="v letter-v">
               <div class="wrapper1">
 
              <div class="seriftop seriftopvleft"> </div>
@@ -464,7 +560,7 @@
 
 
 
-      <div class="w">
+      <div class="w letter-w">
              <div class="wrapper5">
 
              <div class="wcover"></div>
@@ -484,7 +580,7 @@
 
 
 
-      <div class="x">
+      <div class="x letter-x">
 
              <div class="wrapper2">
              <div class="seriftop seriftopa right"></div>
@@ -501,7 +597,7 @@
 
 
 
-      <div class="y">
+      <div class="y letter-y">
                <div class="wrapper1below">
 
                 <div class="wrapperbelow">
@@ -532,13 +628,18 @@
 
 
 
-      <div class="z">
+      <div class="z letter-z">
 
            <div class="wrapper2">
-           <div class="seriftop seriftopa ztop"></div>
-           <div class="serifbottom serifbottoma zbottom"></div>    
-           <div class="stem vbarright zbar"></div>             
+               <div class="seriftop seriftopa ztop"></div>
+               <div class="serifbottom serifbottoma zbottom"></div>    
+               <div class="stem vbarright zbar"></div>             
            </div>
+      </div>
+
+
+      <div class="space">
+        <div class="wrapper1 space-bar"></div>
       </div>
 
 
@@ -550,7 +651,10 @@
 
 
 
+</div>
+	</div>
+
     <script src="assets/js/app.js"></script>
 
-  </body>
+</body>
 </html>

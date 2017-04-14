@@ -1,0 +1,998 @@
+/*!
+ * fullPage 2.9.4
+ * https://github.com/alvarotrigo/fullPage.js
+ * MIT licensed
+ *
+ * Copyright (C) 2013 alvarotrigo.com - A project by Alvaro Trigo
+ */
+html.fp-enabled,
+.fp-enabled body {
+    margin: 0;
+    padding: 0;
+    overflow:hidden;
+
+    /*Avoid flicker on slides transitions for mobile phones #336 */
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+#superContainer {
+    height: 100%;
+    position: relative;
+
+    /* Touch detection for Windows 8 */
+    -ms-touch-action: none;
+
+    /* IE 11 on Windows Phone 8.1*/
+    touch-action: none;
+}
+.fp-section {
+    position: relative;
+    -webkit-box-sizing: border-box; /* Safari<=5 Android<=3 */
+    -moz-box-sizing: border-box; /* <=28 */
+    box-sizing: border-box;
+}
+.fp-slide {
+    float: left;
+}
+.fp-slide, .fp-slidesContainer {
+    height: 100%;
+    display: block;
+}
+.fp-slides {
+    z-index:1;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    -webkit-transition: all 0.3s ease-out; /* Safari<=6 Android<=4.3 */
+    transition: all 0.3s ease-out;
+}
+.fp-section.fp-table, .fp-slide.fp-table {
+    display: table;
+    table-layout:fixed;
+    width: 100%;
+}
+.fp-tableCell {
+    display: table-cell;
+    vertical-align: left;
+    width: 100%;
+    height: 100%;
+     overflow:hidden; 
+}
+.fp-slidesContainer {
+    float: left;
+    position: relative;
+}
+.fp-controlArrow {
+    -webkit-user-select: none; /* webkit (safari, chrome) browsers */
+    -moz-user-select: none; /* mozilla browsers */
+    -khtml-user-select: none; /* webkit (konqueror) browsers */
+    -ms-user-select: none; /* IE10+ */
+    position: absolute;
+    z-index: 4;
+    top: 50%;
+    cursor: pointer;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    margin-top: -38px;
+    -webkit-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+.fp-controlArrow.fp-prev {
+    left: 15px;
+    width: 0;
+    border-width: 38.5px 34px 38.5px 0;
+    border-color: transparent #fff transparent transparent;
+}
+.fp-controlArrow.fp-next {
+    right: 15px;
+    border-width: 38.5px 0 38.5px 34px;
+    border-color: transparent transparent transparent #fff;
+}
+.fp-scrollable {
+    overflow: hidden;
+    position: relative;
+}
+.fp-scroller{
+    overflow: hidden;
+}
+.iScrollIndicator{
+    border: 0 !important;
+}
+.fp-notransition {
+    -webkit-transition: none !important;
+    transition: none !important;
+}
+#fp-nav {
+    position: fixed;
+    z-index: 100;
+    margin-top: -32px;
+    top: 50%;
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+}
+#fp-nav.right {
+    right: 17px;
+}
+#fp-nav.left {
+    left: 17px;
+}
+.fp-slidesNav{
+    position: absolute;
+    z-index: 4;
+    left: 50%;
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+.fp-slidesNav.bottom {
+    bottom: 17px;
+}
+.fp-slidesNav.top {
+    top: 17px;
+}
+#fp-nav ul,
+.fp-slidesNav ul {
+  margin: 0;
+  padding: 0;
+}
+#fp-nav ul li,
+.fp-slidesNav ul li {
+    display: block;
+    width: 14px;
+    height: 13px;
+    margin: 7px;
+    position:relative;
+}
+.fp-slidesNav ul li {
+    display: inline-block;
+}
+#fp-nav ul li a,
+.fp-slidesNav ul li a {
+    display: block;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    text-decoration: none;
+}
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li a.active span,
+#fp-nav ul li:hover a.active span,
+.fp-slidesNav ul li:hover a.active span{
+    height: 12px;
+    width: 12px;
+    margin: -6px 0 0 -6px;
+    border-radius: 100%;
+ }
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    height: 4px;
+    width: 4px;
+    border: 0;
+    background: #333;
+    left: 50%;
+    top: 50%;
+    margin: -2px 0 0 -2px;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+#fp-nav ul li:hover a span,
+.fp-slidesNav ul li:hover a span{
+    width: 10px;
+    height: 10px;
+    margin: -5px 0px 0px -5px;
+}
+#fp-nav ul li .fp-tooltip {
+    position: absolute;
+    top: -2px;
+    color: #fff;
+    font-size: 14px;
+    font-family: arial, helvetica, sans-serif;
+    white-space: nowrap;
+    max-width: 220px;
+    overflow: hidden;
+    display: block;
+    opacity: 0;
+    width: 0;
+    cursor: pointer;
+}
+#fp-nav ul li:hover .fp-tooltip,
+#fp-nav.fp-show-active a.active + .fp-tooltip {
+    -webkit-transition: opacity 0.2s ease-in;
+    transition: opacity 0.2s ease-in;
+    width: auto;
+    opacity: 1;
+}
+#fp-nav ul li .fp-tooltip.right {
+    right: 20px;
+}
+#fp-nav ul li .fp-tooltip.left {
+    left: 20px;
+}
+.fp-auto-height.fp-section,
+.fp-auto-height .fp-slide,
+.fp-auto-height .fp-tableCell{
+    height: auto !important;
+}
+
+.fp-responsive .fp-auto-height-responsive.fp-section,
+.fp-responsive .fp-auto-height-responsive .fp-slide,
+.fp-responsive .fp-auto-height-responsive .fp-tableCell {
+    height: auto !important;
+}
+
+
+body{
+    margin:0 auto;
+    padding:0;
+    font-family:helvetica, arial, sans-serif;
+    z-index:1;
+     font-size: 3.4rem;
+    text-align: center;
+    line-height: 5rem;
+    color: #4f5660;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*my styles*/
+
+.lettercontainer div{
+    display: inline-flex;
+}
+
+.lettercontainer .container{
+margin:0 auto;
+/*width:100%;*/
+font-size:0;
+display:inline-block;
+
+}
+
+.lettercontainer .wrapper1{
+width: 120px;
+height: 155px;
+background-color: white;
+position:relative;
+overflow: hidden;
+/*top:125px;*/
+
+}
+
+.lettercontainer .wrapper1below{
+    height:278px;
+    width:120px;
+    position: relative;
+    top: 125px;
+}
+
+.lettercontainer .wrapperbelow{
+    height:74.91%;
+    width:100%;
+    position:absolute;
+    vertical-align: bottom;
+    bottom:0;
+
+}
+
+.lettercontainer .wrapper2{
+width: 83px;
+height: 155px;
+background-color: white;
+position:relative;
+overflow: hidden;
+}
+
+.lettercontainer .wrapper5{
+width: 200px;
+height: 155px;
+background-color: white;
+position:relative;
+overflow: hidden;
+}
+
+.lettercontainer .wrapper4{
+width: 35px;
+height: 155px;
+background-color: white;
+position:relative;
+
+}
+
+.lettercontainer .wrapper6{
+    width:80px;
+
+}
+
+.lettercontainer .circle{
+height:55%;
+width:70%;
+border-radius:100%;
+background-color: gray;
+display:inline-block;
+bottom:0;
+position: absolute;
+}
+
+.lettercontainer .circle2{
+height:79%;
+width:79%;
+border-radius:100%;
+background-color: white;
+position: absolute;
+right:11%;
+top:10%;
+}
+
+
+.lettercontainer .halfstem{
+    height:55%;
+    width:8%;
+    background-color: gray;
+    position: absolute;
+    bottom:0;
+    z-index: 3000;
+}
+
+.lettercontainer .stem{
+    height:100%;
+    width:8%;
+    background-color: gray;
+    position: absolute;
+    bottom:0;
+}
+
+.lettercontainer .halfstema{
+    right:29%;
+}
+.lettercontainer .serifbottom{
+    width:31%;
+    height:6%;
+    background-color: gray;
+    position: absolute;
+    bottom:0;
+
+}
+
+
+.lettercontainer .seriftop {
+    width:30%;
+    height:6%;
+    background-color: gray;
+    position: absolute;
+
+}
+
+.lettercontainer .circlea{
+    left:0;
+}
+
+.lettercontainer .seriftopa{
+    right:0;
+    bottom:49%;
+
+}
+
+.lettercontainer .serifbottoma{
+    bottom:0;
+    right:0;
+
+}
+
+
+.lettercontainer .serifbottomb{
+    bottom:0;
+
+}
+
+.lettercontainer .circleb{
+    right:0;
+}
+
+.lettercontainer .stemb{
+    right:63%;
+}
+
+
+.lettercontainer .stemd{
+    right:29%;
+}
+
+.lettercontainer .seriftopd{
+    right:0;
+}
+
+.lettercontainer .serifbottomd{
+    right:0;
+
+}
+
+.lettercontainer .circled{
+    left:0;
+}
+
+
+.lettercontainer .circlee{
+    
+}
+
+.lettercontainer .dot{
+    width:23%;
+    height:10%;
+    background-color: gray;
+    margin-top: 80%;
+    position: absolute;
+}
+
+.lettercontainer .halfstemi{
+    width:23%;
+}
+
+.lettercontainer .serifbottomi{
+    width:100%;
+}
+
+.lettercontainer .serifbottoml, .seriftopl{
+    width:100%;
+}
+
+.lettercontainer .steml{
+    width:23%;
+}
+
+.lettercontainer .circlef{
+    top:0;
+    right:0;
+}
+
+.lettercontainer .stemf{
+    height:74%;
+    right:63%;
+}
+
+.lettercontainer .block{
+    width:63.75%;
+    height:72%;
+    right:0;
+    top:28.5%;
+    position: absolute;
+    background-color:white;
+}
+
+.lettercontainer .seriftopf{
+    top:27%;
+    left:-10%;
+    height:9%;
+}
+
+.lettercontainer .seriftopt{
+    top:45%;
+    width:100%;
+}
+
+
+.lettercontainer .stemt{
+    left:40%;
+        width:23%;
+}
+
+.lettercontainer .circleh{
+    bottom:0;
+}
+
+.lettercontainer .blockh{
+    bottom:0;
+    left:7%;
+    background-color: white;
+    width:63.75%;
+    height:31%;
+    position: absolute;
+}
+
+.lettercontainer .blocke{
+    bottom:0;
+    right:0;
+    background-color: white;
+    width:57%;
+    height:44%;
+    position: absolute;
+}
+
+.lettercontainer .crossbare{
+    margin-top:130%;
+    height:6%;
+    width:100%;
+    background-color: gray;
+    position: absolute;
+}
+
+.lettercontainer .hside{
+    width:12%;
+    background-color: gray;
+    height:100%;
+    right:1.5%;
+    position: absolute;
+}
+
+.lettercontainer .serifbottomh{
+    right:0;
+}
+
+.lettercontainer .circlec{
+    width:100%;
+}
+
+.lettercontainer .serifbottome{
+    height:6%;
+    width:60%;
+    background-color: gray;
+    position: absolute;
+    bottom:0;   
+    right:0;
+
+
+}
+
+.lettercontainer .circleg{
+    top:0;
+    width:74%;
+    height:43%;
+}
+
+.lettercontainer .stemg{
+    right:25%;
+    top: 0;
+    height: 82%;
+}
+
+
+.lettercontainer .circleg2{
+
+     height: 39%;
+    width: 75%;
+}
+
+.lettercontainer .blockg{
+    bottom: 49%;
+    left: 0;
+    width: 89%;
+    height: 65%;
+}
+
+.lettercontainer .seriftopg{
+    right:0;
+    top:0;
+    position: absolute;
+    height:4.2%;
+}
+
+
+.lettercontainer .seriftoplrotate{
+    -ms-transform: rotate(-36deg);
+    -webkit-transform: rotate(-36deg);
+    transform: rotate(-36deg);
+    margin-top: 53%;
+    width: 58%;
+    right: 12%;
+}
+
+.lettercontainer .serifbottomlrotate{
+    -ms-transform: rotate(36deg);
+    -webkit-transform: rotate(36deg);
+    transform: rotate(37deg);
+    margin-top: 96%;
+    width: 90%;
+        right: -15px;
+
+    }
+
+
+.lettercontainer .circlep{
+    right:0;
+}   
+
+
+.lettercontainer .seriftopp{
+    left:0;
+    height: 5%;
+}
+
+.lettercontainer .stemp{
+    left:23%;
+    height: 100%
+}
+
+.lettercontainer .stemq{
+    height: 100%;
+}
+
+.lettercontainer .blocku{
+ margin-left: 0;
+    margin-top: 50%;
+    width: 62.916%;
+    height: 36%;
+    background-color: white;
+    position: absolute;
+
+}
+
+.lettercontainer .u2{width: 7%;
+    height: 30%;
+    margin-top: 58%;
+    background-color: gray;
+    position: absolute;
+}
+
+.lettercontainer .seriftopvleft{
+    left:0;
+    bottom: 49%;
+
+}
+
+
+.lettercontainer .seriftopvright{
+    right:0;
+    bottom: 49%;
+    
+}
+
+.lettercontainer .vbarleft{
+    height: 69%;
+    transform: rotate(-30deg);
+    left: 29%;
+    margin-bottom: -15%;
+}
+
+.lettercontainer .vbarright{
+    height: 69%;
+    transform: rotate(30deg);
+    left: 64%;
+    margin-bottom: -15%;
+}
+
+
+.lettercontainer .v{background-color: white;
+    overflow: hidden;}
+
+.lettercontainer .vbarright2{
+    height: 69%;
+    transform: rotate(30deg);
+    left: 94%;
+    margin-bottom: -15%;
+}
+
+.lettercontainer .rightw{
+    margin-left:-20%;
+}
+
+.lettercontainer .vbarleft2{
+height: 69%;
+    left: 57%;
+    margin-bottom: -7%;
+    width: 4%;
+}
+
+.lettercontainer .vbarright2{
+    height: 69%;
+    left: 78%;
+    margin-bottom: -9%;
+    width: 4%;
+}
+
+
+.lettercontainer .seriftopvright2{
+    width:25%;
+}
+
+
+.lettercontainer .seriftopr{
+    left:0;
+    bottom:49%;
+}
+
+.lettercontainer .serifbottomr{
+    left:0;
+    bottom:0;
+}
+
+.lettercontainer .halfstemr{
+    left:23%;
+}
+
+.lettercontainer .circler{
+    width:75%;
+    right:0;
+}
+
+.lettercontainer .blockr{
+
+    bottom: 0;
+    right: 0;
+    background-color: white;
+    width: 92%;
+    height: 53%;
+    position: absolute;
+}
+
+.lettercontainer .right{
+    right:0;
+}
+
+.lettercontainer .left{
+    left:0;
+}
+
+.lettercontainer .vbarleft3{
+    height: 64%;
+    transform: rotate(-40deg);
+    left: 42%;
+    width: 11%;
+    margin-bottom: -7%;
+
+}
+
+.lettercontainer .vbarright3{
+    height: 64%;
+    transform: rotate(40deg);
+    left: 47%;
+    width: 11%;
+    margin-bottom: -7%;
+
+}
+
+.lettercontainer .wcover{
+    background-color: white;
+    width: 30%;
+    top: 35%;
+    left: 29%;
+    height: 20%;
+    position: absolute;
+    z-index: 20000;
+}
+
+.lettercontainer .blocky{
+    height:20%;
+    width:66%;
+}
+
+.lettercontainer .yline{
+    height:17%;
+}
+
+
+.lettercontainer .ztop{width:100%;}
+
+.lettercontainer .zbottom{
+    width:100%;
+}
+
+
+.lettercontainer .zbar{
+    height: 73%;
+    transform: rotate(48deg);
+    left: 48%;
+    width: 11%;
+    margin-bottom: -17%;
+}
+
+.lettercontainer .circlem{
+    bottom:0;
+    width:45%;
+
+}
+
+.lettercontainer .halfstemm{
+    height:45%;
+}
+
+.lettercontainer .mleft{
+    width:6%;
+}
+
+.lettercontainer .blockm{
+    left:6%;
+}
+
+.lettercontainer .serifbottomm{
+    width:14%;
+}
+
+
+
+
+
+.page-wrapper{
+    margin:10%;
+    margin-right:20%;
+    width:80%;
+    height:90%;
+    z-index: 1;
+    display:inline-block;
+
+}
+
+.seriftopb{
+    left:0;
+}
+
+.serifbottomb{
+    left:0;
+}
+
+
+.spacebar{
+    width:100%;
+    height:100%;
+}
+
+.span{
+    text-align: center;
+}
+
+.typehere{
+    height:30%;
+    width: 70%;
+    position: absolute;
+    right:15%;
+    top:39%;
+    text-align: left;
+
+}
+
+.typehere-flicker{
+    color: #e5e6e8;
+    text-align:center;
+    font-size: 1.5rem;
+    position: absolute;
+    display: inline-block;
+    bottom:7%;
+    left:5%;
+}
+
+
+.typehere:hover{
+    cursor:text;
+}
+
+.flicker{
+    height:80%;
+    width:1%;
+    background-color: #bec0c4;
+    margin:2% 0 2% 2%;
+}
+
+.lettercontainer .typehere-flicker{
+    display:inline-block;
+
+}
+
+
+
+
+
+.typehere2{
+    height:30%;
+    width: 70%;
+    position: absolute;
+    right:15%;
+    top:39%;
+    text-align: left;
+
+}
+
+.typehere-flicker2{
+    color: #e5e6e8;
+    text-align:center;
+    font-size: 1.5rem;
+    position: absolute;
+    display: inline-block;
+    bottom:7%;
+    left:5%;
+}
+
+
+.typehere2:hover{
+    cursor:text;
+}
+
+.flicker2{
+    height:80%;
+    width:1%;
+    background-color: #bec0c4;
+    margin:2% 0 2% 2%;
+}
+
+.lettercontainer .typehere-flicker2{
+    display:inline-block;
+
+}
+
+
+
+.typehere3{
+    height:30%;
+    width: 70%;
+    position: absolute;
+    right:15%;
+    top:39%;
+    text-align: left;
+
+}
+
+.typehere-flicker3{
+    color: #e5e6e8;
+    text-align:center;
+    font-size: 1.5rem;
+    position: absolute;
+    display: inline-block;
+    bottom:7%;
+    left:5%;
+}
+
+
+.typehere3:hover{
+    cursor:text;
+}
+
+.flicker3{
+    height:80%;
+    width:1%;
+    background-color: #bec0c4;
+    margin:2% 0 2% 2%;
+}
+
+.lettercontainer .typehere-flicker3{
+    display:inline-block;
+
+}
+
+
+
+.caret {
+  position: relative;
+    position: absolute;
+    right: 11%;
+    bottom: 12%;
+}
+
+.caret:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-top: 40px solid #d8d8d8;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+}
+
+.caret:after {
+  content: '';
+  position: absolute;
+  left: 9px;
+  top: 0;
+  border-top: 31px solid #ffffff;
+  border-left: 31px solid transparent;
+  border-right: 31px solid transparent;
+}
