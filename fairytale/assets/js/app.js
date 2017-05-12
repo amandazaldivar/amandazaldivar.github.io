@@ -44,6 +44,14 @@ $("span").click(function() {
 });
 
 
+$(".last").click(function() {
+	setTimeout(function(){
+	$(".print").removeClass("gone").fadeIn("slow");
+	$(".download").removeClass("gone").fadeIn("slow");
+	}, 2000);
+})
+
+
 
 		// if ($(".section").find(".click").length == 0) {
 		// 	$(".hidden").next().removeClass("hidden");
