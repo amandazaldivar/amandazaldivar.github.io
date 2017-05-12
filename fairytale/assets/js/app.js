@@ -45,10 +45,10 @@ $("span").click(function() {
 
 
 $(".last").click(function() {
-	setTimeout(function(){
-	$(".print").removeClass("gone").fadeIn("slow");
-	$(".download").removeClass("gone").fadeIn("slow");
-	}, 2000);
+	// setTimeout(function(){
+	$(".print").removeClass("gone").fadeIn(3000);
+	$(".download").removeClass("gone").fadeIn(3000);
+	// }, 2000);
 })
 
 
