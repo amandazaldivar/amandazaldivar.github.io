@@ -1,0 +1,143 @@
+
+.more{
+	-moz-border-radius: 15px/15px;
+	-webkit-border-radius: 15px 15px;
+	border-radius: 15px/15px;
+	border: solid 3px #ededed;
+	width: 15px;
+	height: 15px;
+	right: 0px;
+	text-align: center;
+	font-size:.8em;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 900;
+	color: #ededed;
+	margin-right:2%;
+	position: absolute;
+	top:3%;
+}
+
+.explainer{
+	position: absolute;
+	width:10%;
+	height: 7%;
+	right: 0px;
+	margin-right: 2%;
+	font-size:.8em;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	color: #666666;
+	padding:1%;
+	border-radius: 5px;
+	top:7%;
+	text-align: right;
+
+
+}
+
+
+body{
+	margin-top:5%;
+	margin-left: 0;
+}
+
+
+.right{
+	display: inline-block;
+	float:left;
+	width:100%;
+	height: 100%;
+	margin: 0px;
+
+}
+
+.footer{
+/*	display: inline-block;*/
+	text-align: center;
+/*	float:left;*/
+	width:100vw;
+	position: absolute;
+	bottom: 0px;
+	background-color: #202021;
+}
+
+
+.container{
+	padding-left: 26%;
+	padding-right: 30%;
+	padding-top: 1%;
+
+
+
+}
+
+	
+.imagestyle{
+	display: block;
+	float: left;
+	width: 20%;
+	padding: 0px;
+	margin: 0px;
+	font-size:0;
+}
+
+
+h1 {
+  color: gray;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+}
+
+h2{
+  color: black;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 100;
+  font-size: 2em;
+}
+
+
+.button {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 10px 20px 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1em;
+  margin: 4px 2px;
+  border-radius: 5%;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+}
+
+.button:hover {
+  background-color: #ededed;
+  border: none;
+  color: black;
+  padding: 10px 20px 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1em;
+  margin: 4px 2px;
+  border-radius: 5%;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+}
+
+
+
+.imagestyle, .button { cursor: pointer; }
+
+
+.buttonwrapper{
+	margin-top: 3%;
+	display: inline-block;
+	float:left;
+	width:100%;
+	text-align: center;
+
+
+}
+

@@ -107,8 +107,7 @@ var response = new Array (
 
 
 var verbIng = new Array (
-	"burning", "feeling", "hunting", "drawing", "being", 
-	
+	"burning", "feeling", "hunting", "drawing", "being" 
 	);
 
 
@@ -580,12 +579,7 @@ function myFunction() {
     window.print();
 }
 
-var doc = new jsPDF();
-var specialElementHandlers = {
-    '#editor': function (element, renderer) {
-        return true;
-    }
-};
+
 
 $('#cmd').click(function () {
     doc.fromHTML($('.story').html(), 15, 15, {
@@ -598,6 +592,13 @@ $('#cmd').click(function () {
 
 
 
+
+var doc = new jsPDF();
+var specialElementHandlers = {
+    '#editor': function (element, renderer) {
+        return true;
+    }
+};
 
 
 

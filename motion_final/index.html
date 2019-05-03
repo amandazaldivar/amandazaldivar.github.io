@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Looper</title>
+
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,900" rel="stylesheet">
+	<script src="jquery-3.3.1.min.js"></script>
+	<link rel="icon" 
+      type="image/png" 
+      href="favicon-01.png">
+
+</head>
+	<body>
+
+<div class="more">?</div>	
+<div class="explainer">Welcome to looper. Click to rotate or change how many blocks you have.</div>
+
+		<div class ="right">
+			<div class="container">
+			
+				<div class ="imagestyle">
+					<href="gif1.gif">
+						<img src="gif1.gif" alt="Gif" style="width:100%"></href="gif1.gif">
+				</div>
+
+				<div class ="imagestyle">
+					<href="gif2.gif">
+						<img src="gif2.gif" alt="Gif" style="width:100%"></href="gif2.gif">
+				</div>
+
+				<div class ="imagestyle">
+					<href="gif3.gif">
+						<img src="gif3.gif" alt="Gif" style="width:100%"></href="gif3.gif">
+				</div>
+
+				<div class ="imagestyle">
+					<href="gif4.gif">
+						<img src="gif4.gif" alt="Gif" style="width:100%"></href="gif4.gif">
+				</div>
+
+				<div class ="imagestyle">
+					<href="gif5.gif">
+						<img src="gif5.gif" alt="Gif" style="width:100%"></href="gif5.gif">
+				</div>
+
+				<div class ="imagestyle">
+					<href="gif6.gif">
+						<img src="gif6.gif" alt="Gif" style="width:100%"></href="gif6.gif">
+				</div>
+
+				<div class ="imagestyle">
+					<href="gif7.gif">
+						<img src="gif7.gif" alt="Gif" style="width:100%"></href="gif7.gif">
+				</div>
+
+				<div class ="imagestyle">
+					<href="gif8.gif">
+						<img src="gif8.gif" alt="Gif" style="width:100%"></href="gif8.gif">
+				</div>
+
+				<div class ="imagestyle">
+					<href="gif9.gif">
+						<img src="gif9.gif" alt="Gif" style="width:100%"></href="gif9.gif">
+				</div>
+
+				<div class ="imagestyle">
+					<href="gif10.gif">
+						<img src="gif10.gif" alt="Gif" style="width:100%"></href="gif10.gif">
+				</div>
+
+				<div class ="imagestyle">
+					<href="gif11.gif">
+						<img src="gif11.gif" alt="Gif" style="width:100%"></href="gif11.gif">
+				</div>
+
+				<div class ="imagestyle">
+					<href="gif12.gif">
+						<img src="gif12.gif" alt="Gif" style="width:100%"></href="gif12.gif">
+				</div>
+
+				<div class ="imagestyle">
+					<href="gif13.gif">
+						<img src="gif13.gif" alt="Gif" style="width:100%"></href="gif13.gif">
+				</div>
+
+				<div class ="imagestyle">
+					<href="gif14.gif">
+						<img src="gif14.gif" alt="Gif" style="width:100%"></href="gif14.gif">
+				</div>
+
+				<div class ="imagestyle">
+					<href="gif15.gif">
+						<img src="gif15.gif" alt="Gif" style="width:100%"></href="gif15.gif">
+				</div>
+
+				<div class ="imagestyle">
+					<href="gif16.gif">
+						<img src="gif16.gif" alt="Gif" style="width:100%"></href="gif16.gif">
+				</div>
+
+				<div class ="imagestyle">
+					<href="gif17.gif">
+						<img src="gif17.gif" alt="Gif" style="width:100%"></href="gif17.gif">
+				</div>
+
+				<div class ="imagestyle">
+					<href="gif18.gif">
+						<img src="gif18.gif" alt="Gif" style="width:100%"></href="gif18.gif">
+				</div>
+
+				<div class ="imagestyle">
+					<href="gif19.gif">
+						<img src="gif19.gif" alt="Gif" style="width:100%"></href="gif19.gif">
+				</div>
+
+				<div class ="imagestyle">
+					<href="gif20.gif">
+						<img src="gif20.gif" alt="Gif" style="width:100%"></href="gif20.gif">
+				</div>
+
+			</div>	
+
+				<div class = "buttonwrapper">
+						<a class="reset button button1">Randomize</a>
+				</div>	
+
+		</div>
+
+
+		<div class ="footer">
+
+			<h1>Looper</h1>
+
+		</div>
+
+
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+		<script>
+
+
+
+		(function($){
+		 
+		    $.fn.shuffle = function() {
+		 
+		        var allElems = this.get(),
+		            getRandom = function(max) {
+		                return Math.floor(Math.random() * max);
+		            },
+		            shuffled = $.map(allElems, function(){
+		                var random = getRandom(allElems.length),
+		                    randEl = $(allElems[random]).clone(true)[0];
+		                allElems.splice(random, 1);
+		                return randEl;
+		           });
+		 
+		        this.each(function(i){
+		            $(this).replaceWith($(shuffled[i]));
+		        });
+		 
+		        return $(shuffled);
+		 
+		    };
+
+
+		$('img').shuffle();
+
+		$(document).ready(function() {   
+			$('img').click(function() {
+			     if ($(this).css("transform")=='none') {
+		                $(this).css("transform", "rotate(90deg)");
+		            }
+		            else {
+		                $(this).css("transform","")
+		            }
+			});
+		});
+
+		$('.reset').click(function(e){
+			e.preventDefault();
+			location.reload();
+		});
+
+
+		$( ".explainer" ).hide();
+
+    $(function () {
+
+        $('.more').hover(function() {
+           $('.explainer').fadeToggle("slow");
+        });
+
+    });
+
+
+		 
+		})(jQuery);
+
+
+		</script>
+
+	</body>
+</html>
+
