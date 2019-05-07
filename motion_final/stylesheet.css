@@ -39,7 +39,6 @@
 body{
 	margin-top:5%;
 	margin-left: 0;
-	background-color: #fafafa;
 }
 
 
@@ -142,3 +141,7 @@ h2{
 
 }
 
+
+html{
+	background-color: #fafafa;
+}
